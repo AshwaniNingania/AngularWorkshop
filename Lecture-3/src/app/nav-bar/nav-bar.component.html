@@ -1,0 +1,28 @@
+<div class="container">
+  <ul class="list">
+    <li *ngFor="let item of menuItems">
+     <app-nav-bar-detail [menuItem] = "item" (click)="select(item.item)"></app-nav-bar-detail>
+    </li>
+    <!---->
+    <!--We have made a separate array-->
+    <!--Binded array to template-->
+    <!--Property Binding to pass it to child component-->
+    <!--You have to bind data in the child Component-->
+  </ul>
+</div>
+<div class="description">
+  <div class="main">
+     <div *ngFor="let item of menuItems; let i=index">
+       <app-nav-bar-desc [desc] ="item" *ngIf="item.item == selected"></app-nav-bar-desc>
+
+
+       <!--<h3>Item: {{item.item}}</h3>-->
+       <!--<h4>Selected:{{selected}}</h4>-->
+       <!--<p>{{item.item == selected}}</p>-->
+
+
+     </div>
+     <!--<input type="text" #inputdata>-->
+     <!--<button (click) ="update(inputdata.value)">Update</button> -->
+  </div>
+</div>

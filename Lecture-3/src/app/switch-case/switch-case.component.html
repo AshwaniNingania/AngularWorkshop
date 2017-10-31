@@ -1,0 +1,11 @@
+<div class="switch">
+  <app-swich-child [active]="isActive(1)" (click)="select(1)">Tab 1</app-swich-child>
+  <app-swich-child [active]="isActive(2)" (click)="select(2)"> Tab 2</app-swich-child>
+  <app-swich-child [active]="isActive(3)" (click)="select(3)"> tab 3</app-swich-child>
+</div>
+
+<div class="description" [ngSwitch]="tab">
+  <app-swich-child *ngSwitchCase="1">Content for Tab 1</app-swich-child>
+  <app-swich-child *ngSwitchCase="2">Content for Tab 2 </app-swich-child>
+  <app-swich-child *ngSwitchCase="3">Content for Tab 3</app-swich-child>
+</div>

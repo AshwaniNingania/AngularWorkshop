@@ -1,0 +1,9 @@
+.active {
+  color: white;
+  background-color: gray;
+}
+
+.items {
+  display: inline-block;
+  margin-right: 20px;
+}
